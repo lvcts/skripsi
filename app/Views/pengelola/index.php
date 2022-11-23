@@ -11,7 +11,7 @@
                     <div class="container-fluid">
                         <div class="navbar-nav" id="navbarNav">
                             <div class="logo">
-                                <a href="index.html">Neptune</a>
+                                <a href="index.html">Dashboard</a>
                             </div>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
@@ -27,7 +27,7 @@
                                         <li><a class="dropdown-item" href="#">Create Project</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown hidden-on-mobile">
+                                <!-- <li class="nav-item dropdown hidden-on-mobile">
                                     <a class="nav-link dropdown-toggle" href="#" id="exploreDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="material-icons-outlined">explore</i>
                                     </a>
@@ -59,9 +59,9 @@
                                             <button class="btn btn-primary">Create new repository</button>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                             </ul>
-            
+
                         </div>
                         <div class="d-flex">
                             <ul class="navbar-nav">
@@ -74,18 +74,18 @@
                                 <li class="nav-item hidden-on-mobile">
                                     <a class="nav-link" href="#">Projects</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link toggle-search" href="#"><i class="material-icons">search</i></a>
-                                </li>
-                                <li class="nav-item hidden-on-mobile">
+                                </li> -->
+                                <!-- <li class="nav-item hidden-on-mobile">
                                     <a class="nav-link language-dropdown-toggle" href="#" id="languageDropDown" data-bs-toggle="dropdown"><img src="assets/images/flags/us.png" alt=""></a>
-                                        <ul class="dropdown-menu dropdown-menu-end language-dropdown" aria-labelledby="languageDropDown">
-                                            <li><a class="dropdown-item" href="#"><img src="assets/images/flags/germany.png" alt="">German</a></li>
-                                            <li><a class="dropdown-item" href="#"><img src="assets/images/flags/italy.png" alt="">Italian</a></li>
-                                            <li><a class="dropdown-item" href="#"><img src="assets/images/flags/china.png" alt="">Chinese</a></li>
-                                        </ul>
-                                </li>
-                                <li class="nav-item hidden-on-mobile">
+                                    <ul class="dropdown-menu dropdown-menu-end language-dropdown" aria-labelledby="languageDropDown">
+                                        <li><a class="dropdown-item" href="#"><img src="assets/images/flags/germany.png" alt="">German</a></li>
+                                        <li><a class="dropdown-item" href="#"><img src="assets/images/flags/italy.png" alt="">Italian</a></li>
+                                        <li><a class="dropdown-item" href="#"><img src="assets/images/flags/china.png" alt="">Chinese</a></li>
+                                    </ul>
+                                </li> -->
+                                <!-- <li class="nav-item hidden-on-mobile">
                                     <a class="nav-link nav-notifications-toggle" id="notificationsDropDown" href="#" data-bs-toggle="dropdown">4</a>
                                     <div class="dropdown-menu dropdown-menu-end notifications-dropdown" aria-labelledby="notificationsDropDown">
                                         <h6 class="dropdown-header">Notifications</h6>
@@ -157,7 +157,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                 <div class="container">
                     <ul class="menu-list">
                         <li class="active-page">
-                            <a href="index.html" class="active">Dashboard</a>
+                            <a href="#" class="active">Dashboard</a>
                         </li>
                         <li>
                             <a href="#">Apps<i class="material-icons has-sub-menu">keyboard_arrow_down</i></a>
@@ -402,10 +402,10 @@
                                     <div class="page-description-content flex-grow-1">
                                         <h1>Dashboard</h1>
                                     </div>
-                                    <div class="page-description-actions">
+                                    <!-- <div class="page-description-actions">
                                         <a href="#" class="btn btn-info btn-style-light"><i class="material-icons-outlined">file_download</i>Download</a>
                                         <a href="#" class="btn btn-warning btn-style-light"><i class="material-icons">add</i>Create</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -815,7 +815,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-xl-12">
                                 <div class="card widget widget-stats-large">
                                     <div class="row">
@@ -849,19 +849,19 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row">
                             <div class="col-xl-4">
                                 <div class="card">
                                     <img src="assets/images/widgets/blog5.jpeg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                      <h5 class="card-title">The M1 Macbook Pro is Blazing Fast</h5>
-                                      <p class="card-text">Pellentesque habitant morbi tristique senectus et. Curabitur molestie in tellus sed porttitor. Etiam eget erat erat. Nullam auctor a justo lacinia varius.</p>
+                                        <h5 class="card-title">The M1 Macbook Pro is Blazing Fast</h5>
+                                        <p class="card-text">Pellentesque habitant morbi tristique senectus et. Curabitur molestie in tellus sed porttitor. Etiam eget erat erat. Nullam auctor a justo lacinia varius.</p>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                      <li class="list-group-item">Small chip. Giant leap.</li>
-                                      <li class="list-group-item">Creates beauty like a beast.</li>
-                                      <li class="list-group-item">Make connections. Faster than ever.</li>
+                                        <li class="list-group-item">Small chip. Giant leap.</li>
+                                        <li class="list-group-item">Creates beauty like a beast.</li>
+                                        <li class="list-group-item">Make connections. Faster than ever.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -955,7 +955,7 @@
                                     <div class="card-body">
                                         <div class="widget-popular-blog-container">
                                             <div class="widget-popular-blog-image">
-                                                <img src="assets/images/widgets/product2.jpeg" alt=""> 
+                                                <img src="assets/images/widgets/product2.jpeg" alt="">
                                             </div>
                                             <div class="widget-popular-blog-content ps-4">
                                                 <span class="widget-popular-blog-title">
