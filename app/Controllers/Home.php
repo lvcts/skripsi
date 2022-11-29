@@ -2,22 +2,35 @@
 
 namespace App\Controllers;
 
-use App\Models\Wisata;
+use App\Models\WisataModel;
 
 class Home extends BaseController
 {
+    function __construct()
+    {
+        $this->wisata = new WisataModel();
+    }
     public function index()
     {
-        $tittle = ['Home'];
-        echo view('wisatawan/template/header.php', $tittle);
-        echo view('wisatawan/index.php');
-        echo view('wisatawan/template/footer.php');
+        $data = [
+            'title' => 'Home'
+        ];
+        return view('wisatawan/index', $data);
     }
-    public function roomDetail()
+    public function detailWisata()
     {
-        $tittle = ['Detail Wisata'];
-        echo view('wisatawan/template/header.php', $tittle);
-        echo view('wisatawan/room_details.php');
-        // echo view('wisatawan/template/footer.php');
+        $data = [
+            'title' => 'Detail Wisata',
+            'getdata' => $this->wisata->getData()
+        ];
+
+        return view('wisatawan/detail_wisata.php', $data);
+    }
+    public function listWisata()
+    {
+        $data = [
+            'title' => 'List Wisata',
+        ];
+        return view('wisatawan/list_wisata.php', $data);
     }
 }

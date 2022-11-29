@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,9 @@
     <meta name="keywords" content="admin,dashboard">
     <meta name="author" content="stacks">
     <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    
+
     <!-- Title -->
-    <title><?php $tittle;?></title>
+    <title><?php $title; ?></title>
 
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,7 +22,7 @@
     <link href="assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
     <link href="assets/plugins/pace/pace.css" rel="stylesheet">
 
-    
+
     <!-- Theme Styles -->
     <link href="assets/css/main.min.css" rel="stylesheet">
     <link href="assets/css/horizontal-menu/horizontal-menu.css" rel="stylesheet">
@@ -38,4 +38,5 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>

@@ -1,3 +1,5 @@
+<?= $this->extend('wisatawan/template/layout'); ?>
+<?= $this->section('content'); ?>
 <div id="preloader">
     <div class="sk-spinner sk-spinner-wave">
         <div class="sk-rect1"></div>
@@ -206,9 +208,10 @@
                 <i class="icon-light-up"></i> View Weahter forecast </a>
             <!-- End  weather-->
 
-            <div id="banner">
+            <!-- <div id="banner">
                 <h3><span>-30% OFF</span>This week only for all rooms!</h3>
-            </div><!-- End banner -->
+            </div> -->
+            <!-- End banner -->
 
         </div>
     </div><!-- End row -->
@@ -234,4 +237,6 @@
             </div>
         </div>
     </div>
-</div><!-- End container-fluid  -->
+</div>
+<br><br><!-- End container-fluid  -->
+<?= $this->endSection('content'); ?>

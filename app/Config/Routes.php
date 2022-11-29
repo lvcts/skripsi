@@ -37,7 +37,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/room-detail', 'Home::roomDetail', ['as' => 'signUp']);
+$routes->get('/list-wisata', 'Home::listWisata', ['as' => 'listWisata']);
+$routes->get('/detail-wisata', 'Home::detailWisata', ['as' => 'detailWisata']);
 // ('/Role')->sebagai segment pada URL/yang diakses di url
 $routes->get('/home-admin', 'pengelola\HomeAdmin::index', ['as' => 'homeAdmin']);
 $routes->get('/auth', 'pengelola\Auth::index', ['as' => 'signIn']);

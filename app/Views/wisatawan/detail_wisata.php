@@ -1,3 +1,6 @@
+<?= $this->extend('wisatawan/template/layout'); ?>
+<?= $this->section('content'); ?>
+<?php foreach ($getdata as $user) { ?>
 	<!-- <div id="preloader">
 	    <div class="sk-spinner sk-spinner-wave">
 	        <div class="sk-rect1"></div>
@@ -15,24 +18,15 @@
 	<!-- Header================================================== -->
 	<section class="sub_header" id="bg_room">
 		<div class="sub_header_content">
-			<div class="animated fadeInDown">
-				<h1>Double Room</h1>
-				<p>
-					Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.
-				</p>
-			</div>
+			<!-- <div class="animated fadeInDown">
+			<h1>Double Room</h1>
+			<p>
+				Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.
+			</p>
+		</div> -->
 		</div>
-	</section><!-- End Section -->
-
-	<div id="position">
-		<div class="container">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Category</a></li>
-				<li>Page active</li>
-			</ul>
-		</div>
-	</div><!-- End Position -->
+	</section>
+	<!-- End Section -->
 
 	<div class="container margin_60">
 		<div class="row">
@@ -48,7 +42,8 @@
 							</p>
 						</div>
 						<div class="sp-slide">
-							<img alt="" class="sp-image" src="../src/css/images/blank.gif" data-src="img/room_photo/2_medium.jpg" data-small="img/room_photo/2_small.jpg" data-medium="img/room_photo/2_medium.jpg" data-large="img/room_photo/2_large.jpg" data-retina="img/room_photo/2_large.jpg">
+							<div alt="" class="sp-image" id="sp-image2">
+							</div>
 							<p class="sp-layer sp-black sp-padding" data-position="bottomLeft" data-horizontal="5%" data-vertical="5%" data-width="90%" data-show-transition="up" data-show-delay="400">
 								aaaaaaaaaaaa
 							</p>
@@ -108,49 +103,10 @@
 					</div>
 					<div class="col-md-9">
 						<p>
-							Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi. Eu ponderum mediocrem has, vitae adolescens in pro. Mea liber ridens inermis ei, mei legendos vulputate an, labitur tibique te qui. Ad cum movet fierent assueverit, mei stet legere ne. Mel at vide soluta, ut utamur antiopam inciderint sed. Ut iriure perpetua voluptaria has, vim postea denique in, mollis pertinax elaboraret sed in. Per no vidit timeam, quis omittam sed at.
+							<?= $user['deskripsi'] ?>
 						</p>
-						<h4>Room facilities</h4>
-						<p>
-							Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
-						</p>
-						<div class="row">
-							<div class="col-md-6 col-sm-6">
-								<ul class="list_ok">
-									<li>Lorem ipsum dolor sit amet</li>
-									<li>No scripta electram necessitatibus sit</li>
-									<li>Quidam percipitur instructior an eum</li>
-									<li>Ut est saepe munere ceteros</li>
-								</ul>
-							</div>
-							<div class="col-md-6 col-sm-6">
-								<ul class="list_ok">
-									<li>Lorem ipsum dolor sit amet</li>
-									<li>No scripta electram necessitatibus sit</li>
-									<li>Quidam percipitur instructior an eum</li>
-									<li>No scripta electram necessitatibus sit</li>
-								</ul>
-							</div>
-						</div>
-
-						<h4>Room Prices</h4>
-						<!-- start pricing table -->
-						<table class="table table-striped">
-							<tbody>
-								<tr>
-									<td>Low (from 23/03 to 31/05)</td>
-									<td>140$</td>
-								</tr>
-								<tr>
-									<td>Middle (from 23/03 to 31/05)</td>
-									<td>180$</td>
-								</tr>
-								<tr>
-									<td>High (from 23/03 to 31/05)</td>
-									<td>200$</td>
-								</tr>
-							</tbody>
-						</table>
+						<h4>Alamat</h4>
+						<p><?= $user['alamat'] ?></p>
 					</div><!-- End col-md-9  -->
 				</div><!-- End row  -->
 
@@ -300,9 +256,8 @@
 		</div>
 	</div>
 	<!-- End Container -->
-
-
 	<div id="toTop"></div><!-- Back to top button -->
+	<?= $user['link_panorama1']; ?>
 
 	<!-- Common scripts -->
 	<script src="js/jquery-1.11.2.min.js"></script>
@@ -331,8 +286,10 @@
 				autoplay: false
 			});
 		});
-		const panoramaImage = new PANOLENS.ImagePanorama('img/pano1.jpg');
-		const imageContainer = document.querySelector('#sp-image1');
+		var linkImage = 'img/pano1.jpg';
+		var idImage = '#sp-image1';
+		const panoramaImage = new PANOLENS.ImagePanorama(linkImage);
+		const imageContainer = document.querySelector(idImage);
 
 		const viewer = new PANOLENS.Viewer({
 			container: imageContainer,
@@ -343,3 +300,5 @@
 
 		viewer.add(panoramaImage);
 	</script>
+<?php } ?>
+<?= $this->endSection('content'); ?>
