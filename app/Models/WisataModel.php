@@ -2,17 +2,28 @@
 
 namespace App\Models;
 
+use CodeIgniter\Database\OCI8\PreparedQuery;
 use CodeIgniter\Model;
 
 class WisataModel extends Model
 {
-
     protected $table      = 'wisata';
     protected $primaryKey     = 'id_wisata';
     protected $returnType = 'array';
     public function getData()
     {
-        $this->join('panorama', 'panorama.id_panorama = wisata.id_panorama');
+        $this->join('panorama', 'panorama.id_wisata = wisata.id_wisata');
+        $this->join('users', 'users.id = wisata.id');
+        $this->orderBy('wisata.id_wisata', "asc");
+        $this->select('*');
+        $result = $this->findAll();
+        return $result;
+    }
+    public function getDataById($id_wisata)
+    {
+        $this->join('panorama', 'panorama.id_wisata = wisata.id_wisata');
+        $this->join('users', 'users.id = wisata.id');
+        $this->where('wisata.id_wisata', $id_wisata);
         $this->select('*');
         $result = $this->findAll();
         return $result;

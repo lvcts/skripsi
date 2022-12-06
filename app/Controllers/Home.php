@@ -17,19 +17,21 @@ class Home extends BaseController
         ];
         return view('wisatawan/index', $data);
     }
-    public function detailWisata()
+    public function detailWisata($id_wisata)
     {
         $data = [
             'title' => 'Detail Wisata',
-            'getdata' => $this->wisata->getData()
+            'getdata' => $this->wisata->getData(),
+            'getdatabyid' => $this->wisata->getDataById($id_wisata)
         ];
-
         return view('wisatawan/detail_wisata.php', $data);
     }
     public function listWisata()
     {
         $data = [
             'title' => 'List Wisata',
+            'getdata' => $this->wisata->getData()
+
         ];
         return view('wisatawan/list_wisata.php', $data);
     }
