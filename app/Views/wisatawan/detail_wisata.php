@@ -118,7 +118,7 @@
 					<h4>Need help? Call us</h4>
 					<a href="<?= 'https://api.whatsapp.com/send?phone=', $user['contact'] ?>" class="phone"><?= $user['contact']; ?></a>
 				</div>
-				<div class="box_style_2">
+				<!-- <div class="box_style_2">
 					<h3>Order</h3>
 					<a href="#" class="btn_1 add_bottom_15" data-toggle="modal" data-target="#myReview">Order Now!!</a>
 					<div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="myReviewLabel" aria-hidden="true">
@@ -238,7 +238,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -274,7 +274,7 @@
 		});
 		var div = document.getElementById('sp-image1');
 		var PSV = new PhotoSphereViewer({
-			panorama: <?= $user['link_panorama1']; ?>,
+			panorama: '<?= $user['link_panorama1'] ?>',
 			container: div,
 			time_anim: 1000,
 			anim_speed: '1.3rpm',

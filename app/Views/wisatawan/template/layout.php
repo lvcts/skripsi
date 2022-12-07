@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
 
     <!-- Google web fonts -->
-    <link href=<?php echo base_url('http://fonts.googleapis.com/css?family=Varela+Round'); ?> rel='stylesheet' type='text/css'>
-    <link href=<?php echo base_url('http://fonts.googleapis.com/css?family=Lato:300,400,700'); ?> rel='stylesheet' type='text/css'>
-    <link href=<?php echo base_url('http://fonts.googleapis.com/css?family=Gochi+Hand'); ?> rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round'> rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700'> rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand'> rel='stylesheet' type='text/css'>
 
     <!-- BASE CSS -->
     <link href=<?php echo base_url("css/bootstrap.min.css"); ?> rel="stylesheet">

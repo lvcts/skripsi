@@ -18,20 +18,20 @@
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
 
     <!-- Google web fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+    <link href="<?= base_url('http://fonts.googleapis.com/css?family=Varela+Round'); ?>" rel='stylesheet' type='text/css'>
+    <link href="<?= base_url('http://fonts.googleapis.com/css?family=Lato:300,400,700'); ?>" rel='stylesheet" type=' text/css'>
+    <link href="<?= base_url('http://fonts.googleapis.com/css?family=Gochi+Hand'); ?>" rel='stylesheet" type=' text/css'>
 
     <!-- BASE CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/menu.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/fontello/css/icon_set_1.css" rel="stylesheet">
-    <link href="css/fontello/css/icon_set_2.css" rel="stylesheet">
-    <link href="css/fontello/css/fontello.css" rel="stylesheet">
-    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="<?= base_url('css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/animate.min.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/style.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/menu.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/responsive.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/fontello/css/icon_set_1.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/fontello/css/icon_set_2.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/fontello/css/fontello.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('css/magnific-popup.css'); ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -252,10 +252,10 @@
     <div id="toTop"></div><!-- Back to top button -->
 
     <!-- Common scripts -->
-    <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/common_scripts_min.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="assets/validate.js"></script>
+    <script src="<?= base_url('js/jquery-1.11.2.min.js'); ?>"></script>
+    <script src="<?= base_url('js/common_scripts_min.js'); ?>"></script>
+    <script src="<?= base_url('js/functions.js'); ?>"></script>
+    <script src="<?= base_url('assets/validate.js'); ?>"></script>
 
 </body>
 

@@ -38,9 +38,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/list-wisata', 'Home::listWisata', ['as' => 'listWisata']);
-$routes->get('/detail-wisata/(:any)', 'Home::detailWisata/$1');
+$routes->get('/list-wisata/(:any)', 'Home::detailWisata/$1');
 // ('/Role')->sebagai segment pada URL/yang diakses di url
 $routes->get('/home-admin', 'pengelola\HomeAdmin::index', ['as' => 'homeAdmin']);
+$routes->get('/tambah-wisata', 'pengelola\HomeAdmin::wisata', ['as' => 'tambahWisata']);
+$routes->get('/all-list', 'pengelola\HomeAdmin::listWisata', ['as' => 'listWisataAdmin']);
 $routes->get('/auth', 'pengelola\Auth::index', ['as' => 'signIn']);
 $routes->get('/auth-sign', 'pengelola\Auth::signUp', ['as' => 'signUp']);
 
