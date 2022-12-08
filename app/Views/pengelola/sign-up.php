@@ -9,13 +9,18 @@
         <p class="auth-description">Please enter your credentials to create an account.<br>Already have an account? <a href="<?php echo route_to('signIn'); ?>">Sign In</a></p>
 
         <div class="auth-credentials m-b-xxl">
-            <label for="signUpUsername" class="form-label">Username</label>
+            <label for="signUpUsername" class="form-label">Nama Pengelola</label>
             <input type="email" class="form-control m-b-md" id="signUpUsername" aria-describedby="signUpUsername" placeholder="Enter username">
 
-            <label for="signUpEmail" class="form-label">Email address</label>
+            <label for="signUpEmail" class="form-label">Email</label>
             <input type="email" class="form-control m-b-md" id="signUpEmail" aria-describedby="signUpEmail" placeholder="example@neptune.com">
+            <label for="signUpEmail" class="form-label">Kontak</label>
+            <input type="email" class="form-control m-b-md" id="signUpEmail" aria-describedby="signUpEmail" placeholder="628123456789">
 
             <label for="signUpPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signUpPassword" aria-describedby="signUpPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            <div id="emailHelp" class="form-text">Password must be minimum 8 characters length*</div>
+            <label for="signUpPassword" class="form-label">Verifikasi Password</label>
             <input type="password" class="form-control" id="signUpPassword" aria-describedby="signUpPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
             <div id="emailHelp" class="form-text">Password must be minimum 8 characters length*</div>
         </div>

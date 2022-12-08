@@ -19,23 +19,24 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <h3>Data Wisata</h3>
-                    <form action="" method="post"></form>
-                    <label for="exampleInputEmail1" class="form-label">Nama Wisata</label>
-                    <input type="text" class="form-control" id="nama_wisata" aria-describedby="emailHelp">
+                    <?php foreach ($getdatabyid as $user) : ?>
+                        <h3>Data Wisata</h3>
+                        <form action="" method="post">
+                            <label for="exampleInputEmail1" class="form-label">Nama Wisata</label>
+                            <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" value="<?= $user['nama_wisata'] ?>">
 
-                    <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                    <input type="text" class="form-control" id="alamat" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1" class="form-label">Alamat</label>
+                            <textarea class="form-control" aria-label="With textarea" name="alamat"><?= $user['alamat'] ?></textarea>
+                            <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
+                            <textarea class="form-control" aria-label="With textarea" name="deskripsi"><?= $user['deskripsi'] ?></textarea>
 
-                    <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                    <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                            <br><br>
+                            <label class="form-label" for="customFile">Upload foto</label>
+                            <input type="file" class="form-control" id="customFile" />
+                            <br><br>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </form>
 
-                    <br><br>
-                    <label class="form-label" for="customFile">Upload foto</label>
-                    <input type="file" class="form-control" id="customFile" />
-                    <br><br>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                    </form>
                 </div>
                 <div class="col-6">
                     <h3>Panoramic Upload</h3>
@@ -47,8 +48,9 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
+                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano1"><?= $user['deskripsi_pano1'] ?></textarea>
+                                <div id=" emailHelp" class="form-text">Isi deskripsi tempat
+                                </div>
                             </div>
                         </div>
                         <div class="card">
@@ -57,7 +59,7 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano2"> <?= $user['deskripsi_pano2'] ?> </textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
@@ -68,7 +70,7 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano3"><?= $user['deskripsi_pano3'] ?></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
@@ -79,12 +81,13 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano4"><?= $user['deskripsi_pano4'] ?></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
+                <?php endforeach ?>
                 </div>
             </div>
         </div>

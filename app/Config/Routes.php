@@ -41,8 +41,10 @@ $routes->get('/list-wisata', 'Home::listWisata', ['as' => 'listWisata']);
 $routes->get('/list-wisata/(:any)', 'Home::detailWisata/$1');
 // ('/Role')->sebagai segment pada URL/yang diakses di url
 $routes->get('/home-admin', 'pengelola\HomeAdmin::index', ['as' => 'homeAdmin']);
-$routes->get('/tambah-wisata', 'pengelola\HomeAdmin::wisata', ['as' => 'tambahWisata']);
+$routes->get('/tambah-wisata', 'pengelola\HomeAdmin::tambahWisata', ['as' => 'tambahWisata']);
+$routes->get('/edit-wisata/(:any)', 'pengelola\HomeAdmin::editWisata/$1', ['as' => 'editWisata']);
 $routes->get('/all-list', 'pengelola\HomeAdmin::listWisata', ['as' => 'listWisataAdmin']);
+$routes->get('/edit-profile', 'pengelola\HomeAdmin::editProfile', ['as' => 'editProfile']);
 $routes->get('/auth', 'pengelola\Auth::index', ['as' => 'signIn']);
 $routes->get('/auth-sign', 'pengelola\Auth::signUp', ['as' => 'signUp']);
 

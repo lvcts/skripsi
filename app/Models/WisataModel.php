@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use CodeIgniter\Database\OCI8\PreparedQuery;
 use CodeIgniter\Model;
 
 class WisataModel extends Model

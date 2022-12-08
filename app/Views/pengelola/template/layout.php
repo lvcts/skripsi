@@ -80,7 +80,7 @@
                                         <a class="nav-link" href="#">Reports</a>
                                     </li>
                                     <li class="nav-item hidden-on-mobile">
-                                        <a class="nav-link" href="#">Wisata</a>
+                                        <a class="nav-link" href="<?= route_to('editProfile') ?>">Edit Profile</a>
                                     </li>
                                 </ul>
                             </div>
