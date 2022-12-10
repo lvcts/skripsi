@@ -22,19 +22,19 @@
                     <?php foreach ($getdatabyid as $user) : ?>
                         <h3>Data Wisata</h3>
                         <form action="" method="post">
-                            <label for="exampleInputEmail1" class="form-label">Nama Wisata</label>
-                            <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" value="<?= $user['nama_wisata'] ?>">
+                            <label class="form-label">Nama Wisata</label>
+                            <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" id="nama_wisata" value="<?= $user['nama_wisata'] ?>">
 
-                            <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                            <textarea class="form-control" aria-label="With textarea" name="alamat"><?= $user['alamat'] ?></textarea>
-                            <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                            <textarea class="form-control" aria-label="With textarea" name="deskripsi"><?= $user['deskripsi'] ?></textarea>
+                            <label class="form-label">Alamat</label>
+                            <textarea class="form-control" aria-label="With textarea" name="alamat" id="alamat"><?= $user['alamat'] ?></textarea>
+                            <label class="form-label">Deskripsi</label>
+                            <textarea class="form-control" aria-label="With textarea" name="deskripsi" id="deskripsi"><?= $user['deskripsi'] ?></textarea>
 
+                            <!-- <br><br>
+                            <label for="customFile">Upload foto</label>
+                            <input type="file" class="form-control" id="customFile" /> -->
                             <br><br>
-                            <label class="form-label" for="customFile">Upload foto</label>
-                            <input type="file" class="form-control" id="customFile" />
-                            <br><br>
-                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <button type="submit" value="submit" class="btn btn-primary">Simpan</button>
                         </form>
 
                 </div>

@@ -1,38 +1,78 @@
-<div class="app horizontal-menu app-auth-sign-up align-content-stretch d-flex flex-wrap justify-content-end">
-    <div class="app-auth-background">
+<!doctype html>
+<html lang="en">
 
-    </div>
-    <div class="app-auth-container">
-        <div class="logo">
-            <h3>Sign Up</h3>
+<head>
+    <title><?= $title ?></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="login/css/style.css">
+
+</head>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                    <div class="wrap">
+                        <div class="img" style="background-image: url('img/slides_bg/slide2.jpg');"></div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">Sign Up</h3>
+                                </div>
+                            </div>
+                            <form action="#" class="signin-form">
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" required>
+                                    <label class="form-control-placeholder" for="username">Nama Pengelola</label>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" required>
+                                    <label class="form-control-placeholder" for="username">Email</label>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" required>
+                                    <label class="form-control-placeholder" for="username">Kontak</label>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" required>
+                                    <label class="form-control-placeholder" for="username">Alamat</label>
+                                </div>
+                                <div class="form-group">
+                                    <input id="password-field" type="password" class="form-control" required>
+                                    <label class="form-control-placeholder" for="password">Password</label>
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input id="password-field" type="password" class="form-control" required>
+                                    <label class="form-control-placeholder" for="password">Password Verification</label>
+                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign Up</button>
+                                </div>
+                            </form>
+                            <p class="text-center">Have an account? <a href="<?= route_to('signIn'); ?>">Sign In</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="auth-description">Please enter your credentials to create an account.<br>Already have an account? <a href="<?php echo route_to('signIn'); ?>">Sign In</a></p>
+    </section>
 
-        <div class="auth-credentials m-b-xxl">
-            <label for="signUpUsername" class="form-label">Nama Pengelola</label>
-            <input type="email" class="form-control m-b-md" id="signUpUsername" aria-describedby="signUpUsername" placeholder="Enter username">
+    <script src="login/js/jquery.min.js"></script>
+    <script src="login/js/popper.js"></script>
+    <script src="login/js/bootstrap.min.js"></script>
+    <script src="login/js/main.js"></script>
 
-            <label for="signUpEmail" class="form-label">Email</label>
-            <input type="email" class="form-control m-b-md" id="signUpEmail" aria-describedby="signUpEmail" placeholder="example@neptune.com">
-            <label for="signUpEmail" class="form-label">Kontak</label>
-            <input type="email" class="form-control m-b-md" id="signUpEmail" aria-describedby="signUpEmail" placeholder="628123456789">
+</body>
 
-            <label for="signUpPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="signUpPassword" aria-describedby="signUpPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-            <div id="emailHelp" class="form-text">Password must be minimum 8 characters length*</div>
-            <label for="signUpPassword" class="form-label">Verifikasi Password</label>
-            <input type="password" class="form-control" id="signUpPassword" aria-describedby="signUpPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-            <div id="emailHelp" class="form-text">Password must be minimum 8 characters length*</div>
-        </div>
-
-        <div class="auth-submit">
-            <a href="#" class="btn btn-success" id="btn-sign">Sign Up</a>
-        </div>
-        <div class="divider"></div>
-        <div class="auth-alts">
-            <a href="#" class="auth-alts-google"></a>
-            <a href="#" class="auth-alts-facebook"></a>
-            <a href="#" class="auth-alts-twitter"></a>
-        </div>
-    </div>
-</div>
+</html>
