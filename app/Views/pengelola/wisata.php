@@ -20,26 +20,41 @@
             <div class="row">
                 <div class="col-6">
                     <h3>Data Wisata</h3>
-                    <form action="" method="post"></form>
-                    <label for="exampleInputEmail1" class="form-label">Nama Wisata</label>
-                    <input type="text" class="form-control" id="nama_wisata" aria-describedby="emailHelp">
+                    <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <h4>Periksa Entrian Form</h4>
+                            </hr />
+                            <?php echo session()->getFlashdata('error'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <form method="$_POST" action="<?= base_url(); ?>/add-wisata" id="demo-upload" accept="image/*" enctype="multipart/form-data">
+                        <?= csrf_field(); ?>
+                        <label for="exampleInputEmail1" class="form-label">Nama Wisata</label>
+                        <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" aria-describedby="emailHelp">
 
-                    <label for="exampleInputEmail1" class="form-label">Alamat</label>
-                    <input type="text" class="form-control" id="alamat" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1" class="form-label">Alamat</label>
+                        <textarea class="form-control" aria-label="With textarea" id="alamat" name="alamat"></textarea>
 
-                    <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                    <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
+                        <textarea class="form-control" aria-label="With textarea" id="deskripsi" name="deskripsi"></textarea>
 
-                    <br><br>
-                    <label class="form-label" for="customFile">Upload foto</label>
-                    <input type="file" class="form-control" id="customFile" />
-                    <br><br>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                        <br><br>
+                        <label class="form-label" for="foto">Upload foto</label>
+                        <input type="file" class="form-control" id="foto" name="foto" />
+                        <br><br>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
                 <div class="col-6">
                     <h3>Panoramic Upload</h3>
-                    <form action="/upload" id="demo-upload">
+                    <?php if (!empty(session()->getFlashdata('error1'))) : ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <h4>Periksa Entrian Form</h4>
+                            </hr />
+                            <?php echo session()->getFlashdata('error1'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <form method="$_POST" action="<?= base_url(); ?>/signup-process" id="demo-upload">
                         <div class="card">
                             <div class="card-body">
 
@@ -47,7 +62,7 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano1" name="deskripsi_pano1"></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
@@ -57,7 +72,7 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano2" name="deskripsi_pano2"></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
@@ -68,7 +83,7 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano3" name="deskripsi_pano3"></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
@@ -79,7 +94,7 @@
                                 <input type="file" class="form-control" id="customFile" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <input type="text" class="form-control" id="deskripsi" aria-describedby="emailHelp">
+                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano4" name="deskripsi_pano4"></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>

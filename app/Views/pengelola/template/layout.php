@@ -71,7 +71,7 @@
                                 </ul>
 
                             </div>
-                            <div class="d-flex">
+                            <!-- <div class="d-flex">
                                 <ul class="navbar-nav">
                                     <li class="nav-item hidden-on-mobile">
                                         <a class="nav-link" href="<?= route_to('listWisataAdmin') ?>">Data Wisata</a>
@@ -82,10 +82,35 @@
                                     <li class="nav-item hidden-on-mobile">
                                         <a class="nav-link" href="<?= route_to('editProfile') ?>">Edit Profile</a>
                                     </li>
+                                    <li class="nav-item hidden-on-mobile">
+                                        <a class="nav-link" href="<?= base_url('/log-out') ?>">Log Out</a>
+                                    </li>
                                 </ul>
-                            </div>
+                            </div> -->
+
                         </div>
                     </nav>
+                </div>
+                <div class="app-menu">
+                    <div class="container">
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="<?= route_to('listWisataAdmin') ?>">Data Wisata<i class="material-icons has-sub-menu"></i></a>
+                            </li>
+                            <li>
+                                <a href="<?= route_to('tambahWisata') ?>">Tambah Data Wisata<i class="material-icons has-sub-menu"></i></a>
+                            </li>
+                            <li>
+                                <a href="<?= route_to('editProfile') ?>">Edit Profile<i class="material-icons has-sub-menu"></i></a>
+                            </li>
+                            <li class="active-page">
+                                <a href="<?= base_url('/log-out') ?>">Log Out<i class="material-icons has-sub-menu"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
     </header>
     <main>

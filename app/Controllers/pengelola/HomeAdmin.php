@@ -26,6 +26,10 @@ class HomeAdmin extends BaseController
         ];
         return view('pengelola/wisata', $data);
     }
+    public function addWisata()
+    {
+        # code...
+    }
     public function editWisata($id_wisata)
     {
         $data = [
