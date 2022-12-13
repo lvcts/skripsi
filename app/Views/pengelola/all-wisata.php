@@ -27,6 +27,7 @@
                                             <td><?= $user['alamat'] ?></td>
                                             <td><?= $user['deskripsi'] ?></td>
                                             <td><a class="btn btn-success" href="<?= base_url('/edit-wisata/' . $user['id_wisata']) ?>"> Edit </a>
+                                                <a class="btn btn-primary" href="<?= base_url('/panorama/' . $user['id_wisata']) ?>"> Add Panorama </a>
                                                 <a class="btn btn-danger" href="<?= base_url('pegawai/delete/$row->id_pegawai') ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')">Hapus</a>
                                             </td>
                                         </tr>

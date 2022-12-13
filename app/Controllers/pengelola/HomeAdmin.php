@@ -38,6 +38,15 @@ class HomeAdmin extends BaseController
         ];
         return view('pengelola/edit-wisata', $data);
     }
+    public function panorama($id_wisata)
+    {
+        $data = [
+            'title' => 'Add Panorama',
+            'insertpano' => $this->pano->insertPano($id_wisata)
+        ];
+        return view('pengelola/panorama', $data);
+    }
+
 
     public function listwisata()
     {

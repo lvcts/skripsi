@@ -20,36 +20,6 @@
             <div class="row">
                 <div class="col-6">
                     <h3>Data Wisata</h3>
-                    <?php if (!empty(session()->getFlashdata('error'))) : ?>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <h4>Periksa Entrian Form</h4>
-                            </hr />
-                            <?php echo session()->getFlashdata('error'); ?>
-                        </div>
-                    <?php endif; ?>
-                    <form method="POST" action="<?= base_url(); ?>/add-wisata" enctype="multipart/form-data">
-                        <?= csrf_field(); ?>
-                        <label for="nama_wisata" class="form-label">Nama Wisata</label>
-                        <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" autofocus value="<?= old('nama_wisata'); ?>">
-
-                        <label for="alamat" class="form-label">Alamat</label>
-                        <textarea class="form-control" aria-label="With textarea" id="alamat" name="alamat" value="<?= old('alamat'); ?>"></textarea>
-
-                        <label for="deskripsi" class="form-label">Deskripsi</label>
-                        <textarea class="form-control" aria-label="With textarea" id="deskripsi" name="deskripsi" value="<?= old('deskripsi'); ?>"></textarea>
-
-                        <br><br>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Upload Foto</label>
-                            <input class="form-control" type="file" id="foto" name="foto">
-                        </div>
-                        <br><br>
-                        <button type="submit" class="btn btn-primary" value="upload">Simpan</button>
-                    </form>
-                </div>
-                <!-- <div class="col-6">
-                    <h3>Panoramic Upload</h3>
-                    <p class="form-label" style="color: red;"> Foto panorama dapat di upload setelah data wisata berhasil di tambahkan</p>
                     <?php if (!empty(session()->getFlashdata('error1'))) : ?>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                             <h4>Periksa Entrian Form</h4>
@@ -57,19 +27,20 @@
                             <?php echo session()->getFlashdata('error1'); ?>
                         </div>
                     <?php endif; ?>
-                    <form method="$_POST" action="<?= base_url(); ?>/signup-process" id="demo-upload">
+                    <form method="$_POST" action="<?= base_url(); ?>/add-panorama" id="upload" enctype="multipart/form-data">
+                        <?= csrf_field(); ?>
                         <div class="card">
                             <div class="card-body">
 
                                 <label class="form-label" for="customFile">Panorama 1</label>
-                                <input type="file" class="form-control" id="customFile" />
+                                <input type="file" class="form-control" id="link_panorama1" name="link_panorama1" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
                                 <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano1" name="deskripsi_pano1"></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
+                                <div class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <!-- <div class="card">
                             <div class="card-body">
                                 <label class="form-label" for="customFile">Panorama 2</label>
                                 <input type="file" class="form-control" id="customFile" />
@@ -100,10 +71,10 @@
                                 <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano4" name="deskripsi_pano4"></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
-                        </div>
+                        </div> -->
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>

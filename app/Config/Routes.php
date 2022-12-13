@@ -43,6 +43,7 @@ $routes->get('/list-wisata/(:any)', 'Home::detailWisata/$1');
 $routes->get('/home-admin', 'pengelola\HomeAdmin::index', ['as' => 'homeAdmin']);
 $routes->get('/tambah-wisata', 'pengelola\AddWisata::index', ['as' => 'tambahWisata']);
 $routes->get('/edit-wisata/(:any)', 'pengelola\HomeAdmin::editWisata/$1', ['as' => 'editWisata']);
+$routes->get('/panorama/(:any)', 'pengelola\Panoramic::panorama/$1');
 $routes->get('/all-list', 'pengelola\HomeAdmin::listWisata', ['as' => 'listWisataAdmin']);
 $routes->get('/edit-profile', 'pengelola\HomeAdmin::editProfile', ['as' => 'editProfile']);
 $routes->get('/auth', 'pengelola\Auth::index', ['as' => 'signIn']);
@@ -51,7 +52,7 @@ $routes->get('/signup-process', 'pengelola\Auth::process_signup');
 $routes->get('/signin-process', 'pengelola\Auth::process_signin');
 $routes->get('/log-out', 'pengelola\Auth::logout');
 $routes->get('/add-wisata', 'pengelola\AddWisata::addWisata');
-
+$routes->get('/add-panorama', 'pengelola\Panoramic::addpano');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

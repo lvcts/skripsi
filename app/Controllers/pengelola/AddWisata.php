@@ -19,13 +19,14 @@ class AddWisata extends BaseController
         ];
         return view('pengelola/wisata', $data);
     }
+
     public function addWisata()
     {
         if (!$this->validate([
             'nama_wisata' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} Harus diisi',
+                    'required' => 'Nama Wisata Harus Diisi',
                 ]
             ],
             'alamat' => [
@@ -42,18 +43,13 @@ class AddWisata extends BaseController
                     'min_length' => '{field} Minimal 30 Karakter',
                 ]
             ],
-            'foto' => [
-                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
-                'errors' => [
-                    'uploaded' => 'Harus Ada Foto yang diupload',
-                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
-                    'max_size' => 'Ukuran File Maksimal 2 MB'
-                ]
-            ],
+            'foto' => 'uploaded[foto]'
         ])) {
             session()->setFlashdata('error', $this->validator->listErrors());
             return redirect()->back()->withInput();
         }
         $this->wisata->insertWisata();
+        session()->setFlashdata('success', 'Berkas Berhasil diupload');
+        return redirect()->to(base_url('/tambah-wisata'));
     }
 }
