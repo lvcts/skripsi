@@ -1,6 +1,5 @@
 <?= $this->extend('pengelola/template/layout'); ?>
 <?= $this->section('content'); ?>
-
 <div class="app-content">
     <div class="content-wrapper">
         <div class="container">
@@ -20,30 +19,29 @@
             <div class="row">
                 <div class="col-6">
                     <h3>Data Wisata</h3>
-                    <?php if (!empty(session()->getFlashdata('error1'))) : ?>
+                    <?php if (!empty(session()->getFlashdata('error'))) : ?>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                             <h4>Periksa Entrian Form</h4>
                             </hr />
-                            <?php echo session()->getFlashdata('error1'); ?>
+                            <?php echo session()->getFlashdata('error'); ?>
                         </div>
                     <?php endif; ?>
-                    <form method="$_POST" action="<?= base_url(); ?>/add-panorama" id="upload" enctype="multipart/form-data">
+                    <form method="post" action="<?= base_url('/add-panorama/' . $uri); ?>" id="upload" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <div class="card">
                             <div class="card-body">
 
                                 <label class="form-label" for="customFile">Panorama 1</label>
                                 <input type="file" class="form-control" id="link_panorama1" name="link_panorama1" />
-                                <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
                                 <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano1" name="deskripsi_pano1"></textarea>
                                 <div class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
-                        <!-- <div class="card">
+                        <div class="card">
                             <div class="card-body">
                                 <label class="form-label" for="customFile">Panorama 2</label>
-                                <input type="file" class="form-control" id="customFile" />
+                                <input type="file" class="form-control" id="link_panorama2" name="link_panorama2" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
                                 <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano2" name="deskripsi_pano2"></textarea>
@@ -54,7 +52,7 @@
                             <div class="card-body">
 
                                 <label class="form-label" for="customFile">Panorama 3</label>
-                                <input type="file" class="form-control" id="customFile" />
+                                <input type="file" class="form-control" id="link_panorama3" name="link_panorama3" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
                                 <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano3" name="deskripsi_pano3"></textarea>
@@ -65,13 +63,14 @@
                             <div class="card-body">
 
                                 <label class="form-label" for="customFile">Panorama 4</label>
-                                <input type="file" class="form-control" id="customFile" />
+                                <input type="file" class="form-control" id="link_panorama4" name="link_panorama4" />
                                 <br>
                                 <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
                                 <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano4" name="deskripsi_pano4"></textarea>
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
-                        </div> -->
+                        </div>
+                        <!-- <input type="hidden" name="uri" id="uri" value=""> -->
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>

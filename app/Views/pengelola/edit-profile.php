@@ -35,7 +35,6 @@
 
                         <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="<?= $session->email ?>">
-                        <input type="hidden" name="password" value="<?= $session->email ?>">
                         <label for="exampleInputEmail1" class="form-label">Kontak</label>
                         <input type="text" class="form-control" id="contact" name="contact" aria-describedby="emailHelp" value="<?= $session->contact ?>">
                         <label for="exampleInputEmail1" class="form-label">Alamat</label>
@@ -47,11 +46,19 @@
                 </div>
                 <div class="col-6">
                     <h3>Password</h3>
-                    <form action="/upload" id="demo-upload">
+                    <?php if (!empty(session()->getFlashdata('error1'))) : ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <h4>Periksa Entrian Form</h4>
+                            </hr />
+                            <?php echo session()->getFlashdata('error1'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <form method="post" action="<?= base_url(); ?>/edit-password" class="signin-form">
+                        <?= csrf_field(); ?>
                         <label for="exampleInputEmail1" class="form-label">Password</label>
-                        <input type="text" class="form-control" id="password" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="password" name="password">
                         <label for="exampleInputEmail1" class="form-label">Verifikasi Password</label>
-                        <input type="text" class="form-control" id="password" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="password" name="password_verif">
                         <br><br>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>

@@ -1,6 +1,6 @@
 <?= $this->extend('pengelola/template/layout'); ?>
 <?= $this->section('content'); ?>
-<?= dd($getdata) ?>
+
 
 <div class="app-content">
     <div class="content-wrapper">
@@ -21,7 +21,7 @@
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
-                                <?php foreach ($getdata as $user) : ?>
+                                <?php foreach ($getbyid as $user) : ?>
                                     <tbody>
                                         <tr>
                                             <td><?= $user['nama_wisata'] ?></td>

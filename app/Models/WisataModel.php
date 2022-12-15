@@ -29,4 +29,13 @@ class WisataModel extends Model
         $result = $this->findAll();
         return $result;
     }
+    public function getById()
+    {
+        $id = session()->id;
+        $this->join('users', 'users.id = wisata.id');
+        $this->where('users.id', $id);
+        $this->select('*');
+        $result = $this->findAll();
+        return $result;
+    }
 }
