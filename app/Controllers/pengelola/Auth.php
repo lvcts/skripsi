@@ -94,7 +94,7 @@ class Auth extends BaseController
         if ($dataUser) {
             if (password_verify($password, $dataUser->password)) {
                 session()->set([
-                    'id' => $dataUser->nama_pemilik,
+                    'id' => $dataUser->id,
                     'nama_pemilik' => $dataUser->nama_pemilik,
                     'email' => $dataUser->email,
                     'password' => $dataUser->password,

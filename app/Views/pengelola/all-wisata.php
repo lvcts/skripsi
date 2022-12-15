@@ -1,5 +1,6 @@
 <?= $this->extend('pengelola/template/layout'); ?>
 <?= $this->section('content'); ?>
+<?= dd($getdata) ?>
 
 <div class="app-content">
     <div class="content-wrapper">

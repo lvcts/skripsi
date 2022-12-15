@@ -47,7 +47,7 @@
                                     <label class="form-control-placeholder" for="username">Email</label>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <input type="text" class="form-control" name="contact" id="contact" required>
+                                    <input type="text" class="form-control" name="contact" id="contact" value="62" required>
                                     <label class="form-control-placeholder" for="username">Kontak</label>
                                 </div>
                                 <div class="form-group mt-3">

@@ -29,19 +29,4 @@ class WisataModel extends Model
         $result = $this->findAll();
         return $result;
     }
-    public function insertWisata()
-    {
-        $uploadFoto = $this->request->getFile('foto');
-        dd($uploadFoto);
-        // $basename = $this->$uploadFoto->getBasename();
-        // $namaFoto = 'http://localhost:8080/img/upload/' + $basename;
-        // $this->wisata->insert([
-        //     'nama_wisata' => $this->request->getVar('nama_wisata'),
-        //     'alamat' => $this->request->getPost('alamat'),
-        //     'deskripsi' => $this->request->getPost('deskripsi'),
-        //     'foto' => $namaFoto,
-        //     'id' => session()->id,
-        // ]);
-        // $uploadFoto->move('img/upload/', $basename);
-    }
 }

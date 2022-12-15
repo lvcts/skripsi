@@ -27,7 +27,13 @@
                             <?php echo session()->getFlashdata('error'); ?>
                         </div>
                     <?php endif; ?>
-                    <form method="POST" action="<?= base_url(); ?>/add-wisata" enctype="multipart/form-data">
+                    <?php if (!empty(session()->getFlashdata('success'))) : ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            </hr />
+                            <?php echo session()->getFlashdata('success'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <form method="post" action="<?= base_url('/add-wisata'); ?>" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <label for="nama_wisata" class="form-label">Nama Wisata</label>
                         <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" autofocus value="<?= old('nama_wisata'); ?>">
@@ -44,7 +50,7 @@
                             <input class="form-control" type="file" id="foto" name="foto">
                         </div>
                         <br><br>
-                        <button type="submit" class="btn btn-primary" value="upload">Simpan</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
                 <!-- <div class="col-6">

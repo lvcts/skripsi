@@ -21,15 +21,23 @@
             <div class="row">
                 <div class="col-6">
                     <h3>Data Pribadi</h3>
-                    <form method="$_POST" action="<?= base_url(); ?>/edit-process" class="signin-form">
+                    <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <h4>Periksa Entrian Form</h4>
+                            </hr />
+                            <?php echo session()->getFlashdata('error'); ?>
+                        </div>
+                    <?php endif; ?>
+                    <form method="post" action="<?= base_url(); ?>/profile" class="signin-form">
+                        <?= csrf_field(); ?>
                         <label for="exampleInputEmail1" class="form-label">Nama Pengelola</label>
                         <input type="text" class="form-control" name="nama_pemilik" id="nama_pemilik" aria-describedby="emailHelp" value="<?= $session->nama_pemilik ?>">
 
                         <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="text" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="<?= $session->email ?>">
-
+                        <input type="hidden" name="password" value="<?= $session->email ?>">
                         <label for="exampleInputEmail1" class="form-label">Kontak</label>
-                        <input type="text" class="form-control" id="kontak" name="kontak" aria-describedby="emailHelp" value="<?= $session->contact ?>">
+                        <input type="text" class="form-control" id="contact" name="contact" aria-describedby="emailHelp" value="<?= $session->contact ?>">
                         <label for="exampleInputEmail1" class="form-label">Alamat</label>
                         <input type="text" class="form-control" id="alamat" name="alamat" aria-describedby="emailHelp" value="<?= $session->alamat ?>">
 

@@ -51,8 +51,10 @@ $routes->get('/auth-sign', 'pengelola\Auth::signUp', ['as' => 'signUp']);
 $routes->get('/signup-process', 'pengelola\Auth::process_signup');
 $routes->get('/signin-process', 'pengelola\Auth::process_signin');
 $routes->get('/log-out', 'pengelola\Auth::logout');
-$routes->get('/add-wisata', 'pengelola\AddWisata::addWisata');
+$routes->match(['get', 'post'], '/add-wisata', 'pengelola\AddWisata::addWisata');
 $routes->get('/add-panorama', 'pengelola\Panoramic::addpano');
+$routes->match(['get', 'post'], '/profile', 'pengelola\HomeAdmin::profile');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
