@@ -147,4 +147,16 @@ class HomeAdmin extends BaseController
         session()->destroy();
         return redirect()->to('/auth');
     }
+    public function delete()
+    {
+        $ur = $this->request->getUri();
+        $urii = $ur->getSegment(2);
+        $id_wisata = $this->wisata->find($urii);
+        if (empty($id_wisata)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Pegawai Tidak ditemukan !');
+        }
+        $this->wisata->delete($urii);
+        session()->setFlashdata('message', 'Delete Data Pegawai Berhasil');
+        return redirect()->to('/all-list');
+    }
 }

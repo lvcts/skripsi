@@ -31,11 +31,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4">
                             <div class="img_list">
-                                <a href="<?= base_url('/list-wisata/' . $user['id_wisata']) ?>"><img src="<?php if ($user['foto'] == "") {
-                                                                                                                echo "img/room_list_1.jpg";
-                                                                                                            } else {
-                                                                                                                echo $user['foto'];
-                                                                                                            } ?>" alt=""></a>
+                                <a href="<?= base_url('/list-wisata/' . $user['id_wisata']) ?>"><img src="<?= $user['foto'] ?>" alt=""></a>
                             </div>
                         </div>
                         <div class="clearfix visible-xs-block">

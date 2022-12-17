@@ -26,6 +26,12 @@
                             <?php echo session()->getFlashdata('error'); ?>
                         </div>
                     <?php endif; ?>
+                    <?php if (!empty(session()->getFlashdata('success'))) : ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            </hr />
+                            <?php echo session()->getFlashdata('success'); ?>
+                        </div>
+                    <?php endif; ?>
                     <form method="post" action="<?= base_url('/add-panorama/' . $uri); ?>" id="upload" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
                         <div class="card">

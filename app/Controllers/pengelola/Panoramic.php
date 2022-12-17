@@ -70,11 +70,21 @@ class Panoramic extends BaseController
             'deskripsi_pano4' => $this->request->getPost('deskripsi_pano4'),
             'id_wisata' => $id,
         ]);
-        $pano1->move('img/pano/', $basename1);
-        $pano2->move('img/pano/', $basename2);
-        $pano3->move('img/pano/', $basename3);
-        $pano4->move('img/pano/', $basename4);
+        if ($basename1 != "") {
+            $pano1->move('img/pano/', $basename1);
+            if ($basename2 != "") {
+                $pano2->move('img/pano/', $basename2);
+                if ($basename3 != "") {
+                    $pano3->move('img/pano/', $basename3);
+                    if ($basename4 != "") {
+                        $pano4->move('img/pano/', $basename4);
+                    }
+                }
+            }
+        }
+
+
         session()->setFlashdata('success', 'Berkas Berhasil diupload');
-        return redirect()->to(base_url('/tambah-wisata'));
+        return redirect()->to(base_url('/panorama/' . $urii));
     }
 }

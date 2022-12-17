@@ -60,12 +60,12 @@ class AddWisata extends BaseController
         $uploadFoto = $this->request->getFile('foto');
         $basename = $uploadFoto->getName();
         $id = session()->id;
-        // $namaFoto = 'http://localhost:8080/img/upload/' + $basename;
+        $namaFoto = 'img/upload/' . $basename;
         $this->wisata->insert([
             'nama_wisata' => $this->request->getVar('nama_wisata'),
             'alamat' => $this->request->getPost('alamat'),
             'deskripsi' => $this->request->getPost('deskripsi'),
-            'foto' => $basename,
+            'foto' => $namaFoto,
             'id' => $id,
         ]);
         $uploadFoto->move('img/upload/', $basename);

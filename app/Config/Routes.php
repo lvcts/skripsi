@@ -55,6 +55,7 @@ $routes->match(['get', 'post'], '/add-wisata', 'pengelola\AddWisata::addWisata')
 $routes->match(['get', 'post'], '/add-panorama/(:num)', 'pengelola\Panoramic::addpano/$1');
 $routes->match(['get', 'post'], '/profile', 'pengelola\HomeAdmin::profile');
 $routes->match(['get', 'post'], '/edit-password', 'pengelola\HomeAdmin::password');
+$routes->get('/delete/(:num)', 'pengelola\HomeAdmin::delete/$1');
 
 /*
  * --------------------------------------------------------------------

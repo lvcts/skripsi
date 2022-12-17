@@ -95,7 +95,7 @@
                     <div class="container">
                         <ul class="menu-list">
                             <li>
-                                <a href="#">Dashboard</a>
+                                <a href="<?= route_to('homeAdmin') ?>">Dashboard</a>
                             </li>
                             <li>
                                 <a href="<?= route_to('listWisataAdmin') ?>">Data Wisata<i class="material-icons has-sub-menu"></i></a>
