@@ -145,7 +145,7 @@ class HomeAdmin extends BaseController
         $urii = $ur->getSegment(2);
         $id_wisata = $this->wisata->find($urii);
         if (empty($id_wisata)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Pegawai Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Tidak ditemukan !');
         }
         $this->wisata->delete($urii);
         session()->setFlashdata('message', 'Delete Data Pegawai Berhasil');
