@@ -118,7 +118,7 @@
 					<h4>Need help? Call us</h4>
 					<a href="<?= 'https://api.whatsapp.com/send?phone=', $user['contact'] ?>" class="phone"><?= $user['contact']; ?></a>
 				</div>
-				<!-- <div class="box_style_2">
+				<div class="box_style_2">
 					<h3>Order</h3>
 					<a href="#" class="btn_1 add_bottom_15" data-toggle="modal" data-target="#myReview">Order Now!!</a>
 					<div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="myReviewLabel" aria-hidden="true">
@@ -126,7 +126,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title" id="myReviewLabel">Write your review</h4>
+									<h4 class="modal-title" id="myReviewLabel">Informasi Pemesanan</h4>
 								</div>
 								<div class="modal-body">
 									<div id="message-review">
@@ -135,12 +135,12 @@
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<input name="name_review" id="name_review" type="text" placeholder="Your name" class="form-control">
+													<input name="name_review" id="name_review" type="text" placeholder="Nama Pemesan" class="form-control">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
-													<input name="lastname_review" id="lastname_review" type="text" placeholder="Your last name" class="form-control">
+													<input name="email" id="email" type="email" placeholder="Email" class="form-control">
 												</div>
 											</div>
 										</div>
@@ -148,16 +148,15 @@
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<input name="email_review" id="email_review" type="email" placeholder="Your email" class="form-control">
+													<input name="nomor_telp" id="nomor_telp" type="text" placeholder="Nomor Telepon Pemesan" class="form-control">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
+													<label for=" startDate">Kewarganegaraan</label>
 													<select class="form-control" name="room_type_review" id="room_type_review">
-														<option value="">Select room type</option>
-														<option value="Single room">Single Room</option>
-														<option value="Double Room">Double Room</option>
-														<option value="King double room">King Double Room</option>
+														<option value="WNI">WNI</option>
+														<option value="WNA">WNA</option>
 													</select>
 												</div>
 											</div>
@@ -166,6 +165,11 @@
 										<hr>
 										<div class="row">
 											<div class="col-md-6">
+												<label for=" startDate">Tanggal Kedatangan</label>
+												<input id="startDate" class="form-control" type="date" />
+												<!-- <span id="startDateSelected"></span> -->
+											</div>
+											<!-- <div class="col-md-6">
 												<div class="form-group">
 													<label>Position</label>
 													<select class="form-control" name="position_review" id="position_review">
@@ -192,10 +196,10 @@
 														<option value="Not rated">I don't know</option>
 													</select>
 												</div>
-											</div>
+											</div> -->
 										</div>
 
-										<div class="row">
+										<!-- <div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
 													<label>Price</label>
@@ -224,21 +228,22 @@
 													</select>
 												</div>
 											</div>
-										</div>
+										</div> -->
+										<br>
 
 										<div class="form-group">
-											<textarea name="review_text" id="review_text" class="form-control" style="height:100px" placeholder="Write your review"></textarea>
+											<textarea name="review_text" id="review_text" class="form-control" style="height:100px" placeholder="Informasi Tambahan"></textarea>
 										</div>
-										<div class="form-group">
+										<!-- <div class="form-group">
 											<input type="text" id="verify_review" class=" form-control" placeholder="Are you human? 3 + 1 =">
-										</div>
-										<input type="submit" value="Submit" class="btn_1" id="submit-review">
+										</div> -->
+										<input type="submit" value="Pesan" class="btn_1" id="submit-review">
 									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</div>

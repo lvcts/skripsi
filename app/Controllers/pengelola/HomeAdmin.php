@@ -6,6 +6,7 @@ namespace App\Controllers\pengelola;
 use App\Controllers\BaseController;
 use App\Models\WisataModel;
 use App\Models\AuthModel;
+use App\Models\PanoramicModel;
 
 class HomeAdmin extends BaseController
 {
@@ -13,6 +14,7 @@ class HomeAdmin extends BaseController
     {
         $this->wisata = new WisataModel();
         $this->user = new AuthModel();
+        $this->pano = new PanoramicModel();
     }
     public function index()
     {
@@ -36,16 +38,6 @@ class HomeAdmin extends BaseController
         ];
         return view('pengelola/edit-wisata', $data);
     }
-    public function panorama($id_wisata)
-    {
-        $data = [
-            'title' => 'Add Panorama',
-            'insertpano' => $this->pano->insertPano($id_wisata)
-        ];
-        return view('pengelola/panorama', $data);
-    }
-
-
     public function listwisata()
     {
         $data = [

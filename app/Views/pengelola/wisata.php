@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
                     <h3>Data Wisata</h3>
                     <?php if (!empty(session()->getFlashdata('error'))) : ?>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">

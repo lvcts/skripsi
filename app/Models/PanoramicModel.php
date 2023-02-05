@@ -10,4 +10,11 @@ class PanoramicModel extends Model
     protected $primaryKey     = 'id_panorama';
     protected $returnType = 'object';
     protected $allowedFields = ['link_panorama1', 'link_panorama2', 'link_panorama3', 'link_panorama4', 'deksripsi_pano1', 'deksripsi_pano2', 'deksripsi_pano3', 'deksripsi_pano4', 'id_wisata'];
+
+    public function getData()
+    {
+        $this->join('wisata', 'wisata.id_wisata = panorama.id_wisata');
+        $result = $this->find('id_panorama');
+        return $result;
+    }
 }

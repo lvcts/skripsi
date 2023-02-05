@@ -85,7 +85,7 @@
                                         <li><a href="room_booking.html">Room details Booking</a></li> -->
                                     </ul>
                                 </li>
-                                <li><a href="about.html">About</a></li>
+                                <!-- <li><a href="about.html">About</a></li> -->
                                 <!-- <li class="submenu">
                                     <a href="javascript:void(0);" class="show-submenu">Activities <i class="icon-down-open-mini"></i></a>
                                     <ul>
@@ -96,7 +96,7 @@
                                         <li><a href="farm.html">Farm activities</a></li>
                                     </ul>-->
                                 </li>
-                                <li><a href="contacts.html">Contact us</a></li>
+                                <!-- <li><a href="contacts.html">Contact us</a></li> -->
                                 <li class="megamenu submenu">
                                     <a href="<?= route_to('signIn'); ?>" class="show-submenu">Login</a>
                                 </li>
@@ -157,13 +157,13 @@
                 <div class="col-md-12">
                     <div id="social_footer">
                         <ul>
-                            <li><a href="#"><i class="icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon-google"></i></a></li>
-                            <li><a href="#"><i class="icon-instagram"></i></a></li>
-                            <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                            <li><a href="https://www.instagram.com/stzhraslma/"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/stzhraslma/"><i class="icon-twitter"></i></a></li>
+                            <!-- <li><a href="#"><i class="icon-google"></i></a></li> -->
+                            <li><a href="https://www.instagram.com/stzhraslma/"><i class="icon-instagram"></i></a></li>
+                            <!-- <li><a href="#"><i class="icon-pinterest"></i></a></li>
                             <li><a href="#"><i class="icon-vimeo"></i></a></li>
-                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                            <li><a href="#"><i class="icon-youtube-play"></i></a></li> -->
                         </ul>
                     </div>
                 </div>

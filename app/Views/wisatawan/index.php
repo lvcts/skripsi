@@ -69,27 +69,24 @@
             <div class="box_home">
                 <i class="icon_set_1_icon-37"></i>
                 <h3>Temukan Wisata Favorit</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <!-- <p>
+                    Temukan wisata favorit </p> -->
             </div>
         </div>
         <div class="col-md-4">
             <div class="box_home">
                 <i class="icon_set_1_icon-18"></i>
                 <h3>List Wisata Populer</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <!-- <p>
+                </p> -->
             </div>
         </div>
         <div class="col-md-4">
             <div class="box_home">
                 <i class="icon_set_1_icon-16"></i>
                 <h3>Diskusi Dengan Pemilik Wisata</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
+                <!-- <p>
+                </p> -->
             </div>
         </div>
     </div><!-- End row -->

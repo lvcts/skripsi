@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-xl-4">
                     <div class="card widget widget-stats">
                         <div class="card-body">
@@ -29,9 +29,6 @@
                                     <span class="widget-stats-title">Today's Sales</span>
                                     <span class="widget-stats-amount">$38,211</span>
                                     <span class="widget-stats-info">471 Orders Total</span>
-                                </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-negative align-self-start">
-                                    <i class="material-icons">keyboard_arrow_down</i> 4%
                                 </div>
                             </div>
                         </div>
@@ -49,9 +46,6 @@
                                     <span class="widget-stats-amount">23,491</span>
                                     <span class="widget-stats-info">790 unique this month</span>
                                 </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-positive align-self-start">
-                                    <i class="material-icons">keyboard_arrow_up</i> 12%
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -68,18 +62,13 @@
                                     <span class="widget-stats-amount">140,390</span>
                                     <span class="widget-stats-info">87 items downloaded</span>
                                 </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-positive align-self-start">
-                                    <i class="material-icons">keyboard_arrow_up</i> 7%
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
-</div>
-</div>
 </div>
 
 <?= $this->endSection('content'); ?>

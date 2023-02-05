@@ -28,8 +28,8 @@
     <link href=<?php echo base_url("assets/css/horizontal-menu/horizontal-menu.css"); ?> rel="stylesheet">
     <link href=<?php echo base_url("assets/css/custom.css"); ?> rel="stylesheet">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/neptune.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/neptune.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href=<?php echo base_url("assets/images/icon.png"); ?>  />
+    <link rel="icon" type="image/png" sizes="16x16" href=<?php echo base_url("assets/images/icon.png"); ?>  />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,75 +43,35 @@
     <header>
         <div class="app horizontal-menu align-content-stretch d-flex flex-wrap">
             <div class="app-container">
-                <div class="search container">
-                    <form>
-                        <input class="form-control" type="text" placeholder="Type here..." aria-label="Search">
-                    </form>
-                    <a href="#" class="toggle-search"><i class="material-icons">close</i></a>
-                </div>
+
                 <div class="app-header">
                     <nav class="navbar navbar-light navbar-expand-lg container">
                         <div class="container-fluid">
-                            <div class="navbar-nav" id="navbarNav">
-                                <div class="logo">
-                                    <a href="<?= route_to('homeAdmin') ?>">Dashboard</a>
-                                </div>
+                            <a class="navbar-brand" style="color: white;" href="<?= route_to('homeAdmin') ?>">Dashboard</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link hide-sidebar-toggle-button" href="#"><i class="material-icons">last_page</i></a>
-                                    </li>
-                                    <li class="nav-item dropdown hidden-on-mobile">
-                                        <a class="nav-link dropdown-toggle" href="#" id="addDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="material-icons">add</i>
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="addDropdownLink">
-                                            <li><a class="dropdown-item" href="<?= route_to('tambahWisata') ?>">Tambahkan Wisata</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <!-- <div class="d-flex">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item hidden-on-mobile">
                                         <a class="nav-link" href="<?= route_to('listWisataAdmin') ?>">Data Wisata</a>
                                     </li>
-                                    <li class="nav-item hidden-on-mobile">
-                                        <a class="nav-link" href="#">Reports</a>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="<?= route_to('tambahWisata') ?>">Tambah Data Wisata</a>
                                     </li>
-                                    <li class="nav-item hidden-on-mobile">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="<?= route_to('editProfile') ?>">Edit Profile</a>
                                     </li>
-                                    <li class="nav-item hidden-on-mobile">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="<?= base_url('/log-out') ?>">Log Out</a>
                                     </li>
                                 </ul>
-                            </div> -->
-
+                            </div>
                         </div>
                     </nav>
                 </div>
-                <div class="app-menu">
-                    <div class="container">
-                        <ul class="menu-list">
-                            <li>
-                                <a href="<?= route_to('homeAdmin') ?>">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="<?= route_to('listWisataAdmin') ?>">Data Wisata<i class="material-icons has-sub-menu"></i></a>
-                            </li>
-                            <li>
-                                <a href="<?= route_to('tambahWisata') ?>">Tambah Data Wisata<i class="material-icons has-sub-menu"></i></a>
-                            </li>
-                            <li>
-                                <a href="<?= route_to('editProfile') ?>">Edit Profile<i class="material-icons has-sub-menu"></i></a>
-                            </li>
-                            <li class="active-page">
-                                <a href="<?= base_url('/log-out') ?>">Log Out<i class="material-icons has-sub-menu"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            </div>
+        </div>
     </header>
     <main>
         <?= $this->renderSection('content') ?>
@@ -123,13 +83,13 @@
         <script src=<?php echo base_url("assets/plugins/bootstrap/js/bootstrap.min.js"); ?>></script>
         <script src=<?php echo base_url("assets/plugins/perfectscroll/perfect-scrollbar.min.js"); ?>></script>
         <script src=<?php echo base_url("assets/plugins/pace/pace.min.js"); ?>></script>
-        <script src=<?php echo base_url("../../assets/plugins/highlight/highlight.pack.js"); ?>></script>
-        <script src=<?php echo base_url("../../assets/plugins/datatables/datatables.min.js"); ?>></script>
+        <script src=<?php echo base_url("assets/plugins/highlight/highlight.pack.js"); ?>></script>
+        <script src=<?php echo base_url("assets/plugins/datatables/datatables.min.js"); ?>></script>
         <script src=<?php echo base_url("assets/plugins/apexcharts/apexcharts.min.js"); ?>></script>
         <script src=<?php echo base_url("assets/js/main.min.js"); ?>></script>
         <script src=<?php echo base_url("assets/js/custom.js"); ?>></script>
         <script src=<?php echo base_url("assets/js/pages/dashboard.js"); ?>></script>
-        <script src=<?php echo base_url("../../assets/js/pages/datatables.js"); ?>></script>
+        <script src=<?php echo base_url("assets/js/pages/datatables.js"); ?>></script>
     </footer>
 </body>
 
