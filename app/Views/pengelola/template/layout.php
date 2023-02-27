@@ -28,8 +28,8 @@
     <link href=<?php echo base_url("assets/css/horizontal-menu/horizontal-menu.css"); ?> rel="stylesheet">
     <link href=<?php echo base_url("assets/css/custom.css"); ?> rel="stylesheet">
 
-    <link rel="icon" type="image/png" sizes="32x32" href=<?php echo base_url("assets/images/icon.png"); ?>  />
-    <link rel="icon" type="image/png" sizes="16x16" href=<?php echo base_url("assets/images/icon.png"); ?>  />
+    <link rel="icon" type="image/png" sizes="32x32" href=<?php echo base_url("assets/images/icon.png"); ?> />
+    <link rel="icon" type="image/png" sizes="16x16" href=<?php echo base_url("assets/images/icon.png"); ?> />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,10 +60,13 @@
                                         <a class="nav-link" href="<?= route_to('tambahWisata') ?>">Tambah Data Wisata</a>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="nav-link" href="<?= route_to('bookingWisata') ?>">Pesanan</a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="nav-link" href="<?= route_to('editProfile') ?>">Edit Profile</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?= base_url('/log-out') ?>">Log Out</a>
+                                        <a class="nav-link" href="<?= base_url('/log-out') ?>">Keluar</a>
                                     </li>
                                 </ul>
                             </div>

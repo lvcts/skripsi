@@ -67,22 +67,11 @@
 
 					</div>
 					<div class="sp-thumbnails">
-						<!-- <img alt="" class="sp-thumbnail" src="img/room_photo/1_thumb.jpg"> -->
 						<img alt="" class="sp-thumbnail" src="<?= $user['link_panorama1']; ?>">
 						<img alt="" class="sp-thumbnail" src="<?= $user['link_panorama2']; ?>">
 						<img alt="" class="sp-thumbnail" src="<?= $user['link_panorama3'] ?>">
 						<img alt="" class="sp-thumbnail" src="<?= $user['link_panorama4'] ?>">
 					</div>
-				</div>
-				<div id="single_room_feat">
-					<!-- <ul>
-	                    <li><i class="icon_set_2_icon-116"></i>Plasma TV</li>
-	                    <li><i class="icon_set_2_icon-104"></i>King size bed</li>
-	                    <li><i class="icon_set_1_icon-59"></i>Breakfast inclueded</li>
-	                    <li><i class="icon_set_2_icon-111"></i>Bathtub</li>
-	                    <li><i class="icon_set_1_icon-22"></i>Pet allowed</li>
-	                    <li><i class="icon_set_2_icon-106"></i>Safe box</li>
-	                </ul> -->
 				</div>
 				<br>
 				<div class="row">
@@ -94,25 +83,35 @@
 							<?= $user['deskripsi'] ?>
 						</p>
 						<h4>Alamat</h4>
-						<p><?= $user['alamat'] ?></p>
-					</div><!-- End col-md-9  -->
-				</div><!-- End row  -->
+						<p><?= $user['alamat_wisata'] ?></p>
+						<h4>Maps</h4>
+						<div class="mapouter">
+							<div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=<?= $user['nama_wisata'] ?><?= $user['alamat_wisata'] ?>&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co"></a><br>
+								<style>
+									.mapouter {
+										position: relative;
+										text-align: right;
+										height: 100%;
+										width: 100%;
+									}
+								</style><a href="https://embedgooglemap.2yu.co"></a>
+								<style>
+									.gmap_canvas {
+										overflow: hidden;
+										background: none !important;
+										height: 100%;
+										width: 100%;
+									}
+								</style>
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<hr>
 			</div>
 
 			<div class="col-lg-3 col-md-4">
-				<!-- <div class="box_style_1" id="general_facilities">
-					<h3>General facilities</h3>
-					<ul>
-						<li><i class="icon_set_1_icon-86"></i>Free Wifi</li>
-						<li><i class="icon_set_2_icon-103"></i>Loundry service</li>
-						<li><i class="icon_set_2_icon-110"></i>Swimming pool</li>
-						<li><i class="icon_set_1_icon-58"></i>Restaurant</li>
-						<li><i class="icon_set_1_icon-27"></i>Parking</li>
-					</ul>
-					<p>His <strong>civibus tacimates</strong> ex, an quo nominavi qualisque. In erant dissentiunt vel, dicit legimus docendi an nam. Te congue perfecto eos, aliquid corrumpit ea est, eam petentium repudiandae ad.</p>
-				</div> -->
 				<div class=" box_style_2">
 					<i class="icon_set_1_icon-90"></i>
 					<h4>Need help? Call us</h4>
@@ -129,18 +128,17 @@
 									<h4 class="modal-title" id="myReviewLabel">Informasi Pemesanan</h4>
 								</div>
 								<div class="modal-body">
-									<div id="message-review">
-									</div>
-									<form method="post" action="assets/review.php" name="review" id="review">
+									<form method="post" action="<?= base_url(); ?>/bookingproccess">
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<input name="name_review" id="name_review" type="text" placeholder="Nama Pemesan" class="form-control">
+													<input type="hidden" name="wisata" value="<?= $user['nama_wisata']; ?>">
+													<input name="nama_pemesan" id="nama_pemesan" type="text" placeholder="Nama Pemesan" class="form-control" required>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
-													<input name="email" id="email" type="email" placeholder="Email" class="form-control">
+													<input name="email" id="email" type="email" placeholder="Email" class="form-control" required>
 												</div>
 											</div>
 										</div>
@@ -148,13 +146,13 @@
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<input name="nomor_telp" id="nomor_telp" type="text" placeholder="Nomor Telepon Pemesan" class="form-control">
+													<input name="nomor_telpon" id="nomor_telpon" type="text" placeholder="Nomor Telepon Pemesan" class="form-control" required>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
 													<label for=" startDate">Kewarganegaraan</label>
-													<select class="form-control" name="room_type_review" id="room_type_review">
+													<select class="form-control" name="kewarganegaraan" id="kewarganegaraan" required>
 														<option value="WNI">WNI</option>
 														<option value="WNA">WNA</option>
 													</select>
@@ -166,78 +164,16 @@
 										<div class="row">
 											<div class="col-md-6">
 												<label for=" startDate">Tanggal Kedatangan</label>
-												<input id="startDate" class="form-control" type="date" />
-												<!-- <span id="startDateSelected"></span> -->
+												<input id="tanggal_kedatangan" name="tanggal_kedatangan" class="form-control" type="date" required>
 											</div>
-											<!-- <div class="col-md-6">
-												<div class="form-group">
-													<label>Position</label>
-													<select class="form-control" name="position_review" id="position_review">
-														<option value="">Please review</option>
-														<option value="Low">Low</option>
-														<option value="Sufficient">Sufficient</option>
-														<option value="Good">Good</option>
-														<option value="Excellent">Excellent</option>
-														<option value="Superb">Super</option>
-														<option value="Not rated">I don't know</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Comfort</label>
-													<select class="form-control" name="comfort_review" id="comfort_review">
-														<option value="">Please review</option>
-														<option value="Low">Low</option>
-														<option value="Sufficient">Sufficient</option>
-														<option value="Good">Good</option>
-														<option value="Excellent">Excellent</option>
-														<option value="Superb">Super</option>
-														<option value="Not rated">I don't know</option>
-													</select>
-												</div>
-											</div> -->
 										</div>
-
-										<!-- <div class="row">
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Price</label>
-													<select class="form-control" name="price_review" id="price_review">
-														<option value="">Please review</option>
-														<option value="Low">Low</option>
-														<option value="Sufficient">Sufficient</option>
-														<option value="Good">Good</option>
-														<option value="Excellent">Excellent</option>
-														<option value="Superb">Super</option>
-														<option value="Not rated">I don't know</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="form-group">
-													<label>Quality</label>
-													<select class="form-control" name="quality_review" id="quality_review">
-														<option value="">Please review</option>
-														<option value="Low">Low</option>
-														<option value="Sufficient">Sufficient</option>
-														<option value="Good">Good</option>
-														<option value="Excellent">Excellent</option>
-														<option value="Superb">Super</option>
-														<option value="Not rated">I don't know</option>
-													</select>
-												</div>
-											</div>
-										</div> -->
 										<br>
 
 										<div class="form-group">
-											<textarea name="review_text" id="review_text" class="form-control" style="height:100px" placeholder="Informasi Tambahan"></textarea>
+											<textarea name="informasi_tambahan" id="informasi_tambahan" class="form-control" style="height:100px" placeholder="Informasi Tambahan" required></textarea>
 										</div>
-										<!-- <div class="form-group">
-											<input type="text" id="verify_review" class=" form-control" placeholder="Are you human? 3 + 1 =">
-										</div> -->
-										<input type="submit" value="Pesan" class="btn_1" id="submit-review">
+										<input type="hidden" name="id" value="<?= $user['id']; ?>">
+										<button type="submit" class="btn_1">Pesan</button>
 									</form>
 								</div>
 							</div>

@@ -38,8 +38,8 @@
                         <label for="nama_wisata" class="form-label">Nama Wisata</label>
                         <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" autofocus value="<?= old('nama_wisata'); ?>">
 
-                        <label for="alamat" class="form-label">Alamat</label>
-                        <textarea class="form-control" aria-label="With textarea" id="alamat" name="alamat" value="<?= old('alamat'); ?>"></textarea>
+                        <label for="alamat_wisata" class="form-label">Alamat</label>
+                        <textarea class="form-control" aria-label="With textarea" id="alamat_wisata" name="alamat_wisata" value="<?= old('alamat_wisata'); ?>"></textarea>
 
                         <label for="deskripsi" class="form-label">Deskripsi</label>
                         <textarea class="form-control" aria-label="With textarea" id="deskripsi" name="deskripsi" value="<?= old('deskripsi'); ?>"></textarea>

@@ -12,48 +12,47 @@
                     </div>
                 <?php endif; ?>
                 <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">Basic</h5>
-                        </div>
-                        <div class="card-body">
-                            <table id="datatable1" class="display" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Nama Wisata</th>
-                                        <th>Alamat</th>
-                                        <th>Deskripsi</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <?php foreach ($getbyid as $user) : ?>
-                                    <tbody>
-                                        <tr>
-                                            <td><?= $user['nama_wisata'] ?></td>
-                                            <td><?= $user['alamat'] ?></td>
-                                            <td><?= $user['deskripsi'] ?></td>
-                                            <td><a class="btn btn-success" href="<?= base_url('/edit-wisata/' . $user['id_wisata']) ?>"> Edit </a>
-                                                <a class="btn btn-primary" href="<?= base_url('/panorama/' . $user['id_wisata']) ?>"> Add Panorama </a>
-                                                <a class="btn btn-danger" href="<?= base_url('/delete/' . $user['id_wisata']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')">Hapus</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                <?php endforeach ?>
-                                <tfoot>
-                                    <tr>
-                                        <th>Nama Wisata</th>
-                                        <th>Alamat</th>
-                                        <th>Deskripsi</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
+                    <table class="table table-striped">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Nama Wisata</th>
+                                <th scope="col">Alamat</th>
+                                <th scope="col">Deskripsi</th>
+                                <th scope="col">Aksi</th>
+                            </tr>
+                        </thead>
+                        <?php foreach ($getbyid as $user) : ?>
+                            <?php $db = db_connect();
+                            $id = session()->id;
+                            $id_wisata = $user['id_wisata'];
+                            $query = $db->query("SELECT panorama.id_panorama FROM wisata
+                                    JOIN panorama on panorama.id_wisata = wisata.id_wisata
+                                    WHERE wisata.id_wisata = '$id_wisata'");
+                            $row = $query->getRow();
+                            ?>
+                            <tbody>
+                                <tr>
+                                    <td scope="row"><?= $user['nama_wisata'] ?></td>
+                                    <td scope="row"><?= $user['alamat_wisata'] ?></td>
+                                    <td scope="row"><?= $user['deskripsi'] ?></td>
+                                    <td scope="row"><a class="btn btn-success" href="<?= base_url('/edit-wisata/' . $user['id_wisata']) ?>"> Edit </a>
+                                        <?php if (empty($row)) {
+                                        ?>
+                                            <a class="btn btn-primary" href="<?= base_url('/panorama/' . $user['id_wisata']) ?>"> Add Panorama </a>
+                                        <?php } else { ?>
+                                            <a class="btn btn-primary" href="<?= base_url('/edit-panorama/' . $user['id_wisata']) ?>"> Edit Panorama </a>
+                                        <?php } ?>
+                                        <a class="btn btn-danger" href="<?= base_url('/delete/' . $user['id_wisata']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')">Hapus</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        <?php endforeach ?>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>

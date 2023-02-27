@@ -9,7 +9,7 @@ class WisataModel extends Model
     protected $table      = 'wisata';
     protected $primaryKey     = 'id_wisata';
     protected $returnType = 'array';
-    protected $allowedFields = ['nama_wisata', 'alamat', 'deskripsi', 'foto', 'id'];
+    protected $allowedFields = ['nama_wisata', 'alamat_wisata', 'deskripsi', 'foto', 'id'];
 
     public function getData()
     {
@@ -32,7 +32,6 @@ class WisataModel extends Model
     public function getById()
     {
         $id = session()->id;
-        $this->join('panorama', 'panorama.id_wisata = wisata.id_wisata');
         $this->join('users', 'users.id = wisata.id');
         $this->where('users.id', $id);
         $this->select('*');

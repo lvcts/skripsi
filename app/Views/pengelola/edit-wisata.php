@@ -18,80 +18,41 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
+                    <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <h4>Periksa Entrian Form</h4>
+                            </hr />
+                            <?php echo session()->getFlashdata('error'); ?>
+                        </div>
+                    <?php endif; ?>
                     <?php foreach ($getdatabyid as $user) : ?>
                         <h3>Data Wisata</h3>
-                        <form action="" method="post">
+                        <form method="post" action="<?= base_url(); ?>/edit-wisata" class="signin-form">
+                            <?= csrf_field(); ?>
                             <label class="form-label">Nama Wisata</label>
                             <input type="text" class="form-control" id="nama_wisata" name="nama_wisata" id="nama_wisata" value="<?= $user['nama_wisata'] ?>">
 
                             <label class="form-label">Alamat</label>
-                            <textarea class="form-control" aria-label="With textarea" name="alamat" id="alamat"><?= $user['alamat'] ?></textarea>
+                            <textarea class="form-control" aria-label="With textarea" name="alamat_wisata" id="alamat_wisata"><?= $user['alamat_wisata'] ?></textarea>
                             <label class="form-label">Deskripsi</label>
                             <textarea class="form-control" aria-label="With textarea" name="deskripsi" id="deskripsi"><?= $user['deskripsi'] ?></textarea>
 
-                            <!-- <br><br>
-                            <label for="customFile">Upload foto</label>
-                            <input type="file" class="form-control" id="customFile" /> -->
+                            <br><br>
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Upload Foto</label>
+                                <input class="form-control" type="file" id="foto" name="foto">
+                            </div>
                             <br><br>
                             <button type="submit" value="submit" class="btn btn-primary">Simpan</button>
                         </form>
 
                 </div>
-                <div class="col-6">
-                    <h3>Panoramic Upload</h3>
-                    <form action="/upload" id="demo-upload">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <label class="form-label" for="customFile">Panorama 1</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano1"><?= $user['deskripsi_pano1'] ?></textarea>
-                                <div id=" emailHelp" class="form-text">Isi deskripsi tempat
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <label class="form-label" for="customFile">Panorama 2</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano2"> <?= $user['deskripsi_pano2'] ?> </textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-
-                                <label class="form-label" for="customFile">Panorama 3</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano3"><?= $user['deskripsi_pano3'] ?></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-
-                                <label class="form-label" for="customFile">Panorama 4</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" name="deskripsi_pano4"><?= $user['deskripsi_pano4'] ?></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                    </form>
-                <?php endforeach ?>
-                </div>
+            <?php endforeach ?>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>

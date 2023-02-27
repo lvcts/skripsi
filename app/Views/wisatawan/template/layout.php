@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="farm activities, itineraries, farm holidays, country holidays, bed and breakfast, hotel, country hotel" />
-    <meta name="description" content="Country Holidays - Premium site template for a country accommodation.">
+    <meta name="description">
     <meta name="author" content="Ansonika">
     <title><?= $title; ?></title>
 
@@ -73,17 +73,12 @@
                             <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                             <ul>
                                 <li>
-                                    <a href="<?= route_to('Home'); ?>" class="show-submenu">Home</a>
+                                    <a href="<?= route_to('Home'); ?>" class="show-submenu">Halaman Utama</a>
                                     <!-- <ul>
                                         <li><a href=" index.html">With Revolution Slider</a> -->
                                 </li>
-                                <li class="submenu">
-                                    <a href="#" class="show-submenu">Wisata <i class="icon-down-open-mini"></i></a>
-                                    <ul>
-                                        <li><a href="<?= route_to('listWisata'); ?>">List Wisata</a></li>
-                                        <!-- <li><a href="room_details.html">Room details</a></li>
-                                        <li><a href="room_booking.html">Room details Booking</a></li> -->
-                                    </ul>
+                                <li>
+                                    <a href="<?= route_to('listWisata'); ?>" class="show-submenu"> List Wisata </a>
                                 </li>
                                 <!-- <li><a href="about.html">About</a></li> -->
                                 <!-- <li class="submenu">
@@ -97,8 +92,8 @@
                                     </ul>-->
                                 </li>
                                 <!-- <li><a href="contacts.html">Contact us</a></li> -->
-                                <li class="megamenu submenu">
-                                    <a href="<?= route_to('signIn'); ?>" class="show-submenu">Login</a>
+                                <li>
+                                    <a href="<?= route_to('signIn'); ?>" class="show-submenu">Masuk</a>
                                 </li>
                             </ul>
                         </div><!-- End main-menu -->

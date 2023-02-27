@@ -26,7 +26,7 @@
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <h3 class="mb-4">Sign Up</h3>
+                                    <h3 class="mb-4">Daftar</h3>
                                 </div>
                             </div>
                             <?php if (!empty(session()->getFlashdata('error'))) : ?>
@@ -61,14 +61,14 @@
                                 </div>
                                 <div class="form-group">
                                     <input id="password-verif" type="password" class="form-control" name="password_verif" id="password_verif" required>
-                                    <label class="form-control-placeholder" for="password">Password Verification</label>
+                                    <label class="form-control-placeholder" for="password">Password Verifikasi</label>
                                     <span toggle="#password-verif" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign Up</button>
+                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Daftar</button>
                                 </div>
                             </form>
-                            <p class="text-center">Have an account? <a href="<?= route_to('signIn'); ?>">Sign In</a></p>
+                            <p class="text-center">Sudah memiliki akun? <a href="<?= route_to('signIn'); ?>">Masuk</a></p>
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@ class HomeAdmin extends BaseController
     {
         $data = [
             'title' => 'All Data',
-            'getbyid' => $this->wisata->getById()
+            'getbyid' => $this->wisata->getById(),
         ];
         return view('pengelola/all-wisata', $data);
     }
@@ -52,6 +52,18 @@ class HomeAdmin extends BaseController
             'title' => 'Edit Profile'
         ];
         return view('pengelola/edit-profile', $data);
+    }
+    public function bookingWisata()
+    {
+        $db = db_connect();
+        $id = session()->id;
+        $query = $db->query("SELECT * FROM booking WHERE id ='$id'");
+        $booking = $query->getResultArray();
+        $data = [
+            'title' => 'Booking Wisata',
+            'booking' => $booking
+        ];
+        return view('pengelola/booking', $data);
     }
     public function profile()
     {
@@ -148,7 +160,7 @@ class HomeAdmin extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Tidak ditemukan !');
         }
         $this->wisata->delete($urii);
-        session()->setFlashdata('message', 'Delete Data Pegawai Berhasil');
+        session()->setFlashdata('message', 'Delete Data Berhasil');
         return redirect()->to('/all-list');
     }
 }
