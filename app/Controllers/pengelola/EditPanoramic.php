@@ -14,12 +14,13 @@ class EditPanoramic extends BaseController
     }
     public function panorama()
     {
-        $uri = $this->request->uri->getSegments();
-
+        $uri = $this->request->getUri();
+        $urii = $uri->getSegment(2);
+        $id  = intval($urii);
         $data = [
             'title' => 'Add Panorama',
             'uri' => $uri[1],
-            'getdata' => $this->pano->getData()
+            'getdata' => $this->pano->where('id_panorama',)->findAll()
         ];
         return view('pengelola/panorama', $data);
     }

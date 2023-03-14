@@ -35,13 +35,13 @@
                                     <td scope="row"><?= $user['nama_wisata'] ?></td>
                                     <td scope="row"><?= $user['alamat_wisata'] ?></td>
                                     <td scope="row"><?= $user['deskripsi'] ?></td>
-                                    <td scope="row"><a class="btn btn-success" href="<?= base_url('/edit-wisata/' . $user['id_wisata']) ?>"> Edit </a>
+                                    <td scope="row"><a class="btn btn-success" href="<?= base_url('/edit-wisata/' . $user['id_wisata']) ?>"> Edit </a> <br>
                                         <?php if (empty($row)) {
                                         ?>
-                                            <a class="btn btn-primary" href="<?= base_url('/panorama/' . $user['id_wisata']) ?>"> Add Panorama </a>
+                                            <a class="btn btn-primary" href="<?= base_url('/panorama/' . $user['id_wisata']) ?>"> Tambah Panorama </a>
                                         <?php } else { ?>
                                             <a class="btn btn-primary" href="<?= base_url('/edit-panorama/' . $user['id_wisata']) ?>"> Edit Panorama </a>
-                                        <?php } ?>
+                                        <?php } ?> <br>
                                         <a class="btn btn-danger" href="<?= base_url('/delete/' . $user['id_wisata']) ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ?')">Hapus</a>
                                     </td>
                                 </tr>

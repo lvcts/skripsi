@@ -29,29 +29,10 @@
                                     <div class="widget-stats-content flex-fill">
                                         <span class="widget-stats-title">Total Wisata</span>
                                         <?php $db = db_connect();
-                                        $query = $db->query("SELECT COUNT(*) as wisata FROM wisata");
+                                        $id = session()->id;
+                                        $query = $db->query("SELECT COUNT(*) as wisata FROM wisata where id = '$id'");
                                         $wisata = $query->getRow(); ?>
                                         <span class="widget-stats-amount"><?= $wisata->wisata; ?></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-6">
-                    <a href="<?= route_to('bookingWisata') ?>">
-                        <div class="card widget widget-stats">
-                            <div class="card-body">
-                                <div class="widget-stats-container d-flex">
-                                    <div class="widget-stats-icon widget-stats-icon-warning">
-                                        <i class="material-icons-outlined">person</i>
-                                    </div>
-                                    <div class="widget-stats-content flex-fill">
-                                        <span class="widget-stats-title">Total Pesanan</span>
-                                        <?php $db = db_connect();
-                                        $query = $db->query("SELECT COUNT(*) as booking FROM booking");
-                                        $wisata = $query->getRow(); ?>
-                                        <span class="widget-stats-amount"><?= $wisata->booking; ?></span>
                                     </div>
                                 </div>
                             </div>

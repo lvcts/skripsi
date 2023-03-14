@@ -30,11 +30,12 @@ class HomeAdmin extends BaseController
         ];
         return view('pengelola/wisata', $data);
     }
-    public function editWisata($id_wisata)
+    public function editWisata()
     {
+        $id = session()->id;
         $data = [
             'title' => 'Wisata',
-            'getdatabyid' => $this->wisata->getDataById($id_wisata)
+            'getdatabyid' => $this->wisata->where('id', $id)->findAll()
         ];
         return view('pengelola/edit-wisata', $data);
     }
@@ -42,7 +43,7 @@ class HomeAdmin extends BaseController
     {
         $data = [
             'title' => 'All Data',
-            'getbyid' => $this->wisata->getById(),
+            'getbyid' => $this->wisata->getById()
         ];
         return view('pengelola/all-wisata', $data);
     }

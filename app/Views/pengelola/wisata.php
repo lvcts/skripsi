@@ -53,63 +53,6 @@
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
-                <!-- <div class="col-6">
-                    <h3>Panoramic Upload</h3>
-                    <p class="form-label" style="color: red;"> Foto panorama dapat di upload setelah data wisata berhasil di tambahkan</p>
-                    <?php if (!empty(session()->getFlashdata('error1'))) : ?>
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <h4>Periksa Entrian Form</h4>
-                            </hr />
-                            <?php echo session()->getFlashdata('error1'); ?>
-                        </div>
-                    <?php endif; ?>
-                    <form method="$_POST" action="<?= base_url(); ?>/signup-process" id="demo-upload">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <label class="form-label" for="customFile">Panorama 1</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano1" name="deskripsi_pano1"></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <label class="form-label" for="customFile">Panorama 2</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano2" name="deskripsi_pano2"></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-
-                                <label class="form-label" for="customFile">Panorama 3</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano3" name="deskripsi_pano3"></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-
-                                <label class="form-label" for="customFile">Panorama 4</label>
-                                <input type="file" class="form-control" id="customFile" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano4" name="deskripsi_pano4"></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                    </form>
-                </div> -->
             </div>
         </div>
     </div>

@@ -22,6 +22,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+
     <!-- BASE CSS -->
     <link href=<?php echo base_url("css/bootstrap.min.css"); ?> rel="stylesheet">
     <link href=<?php echo base_url("css/animate.min.css"); ?> rel="stylesheet">
@@ -173,6 +175,25 @@
     <script src=<?php echo base_url("js/common_scripts_min.js"); ?>></script>
     <script src=<?php echo base_url("js/functions.js"); ?>></script>
     <script src=<?php echo base_url("assets/validate.js"); ?>></script>
+    <script src=<?php echo base_url("js/jquery.sliderPro.min.js"); ?>></script>
+    <script type="text/javascript">
+        $(document).ready(function($) {
+            $('#Img_carousel').sliderPro({
+                width: 960,
+                height: 500,
+                fade: true,
+                arrows: true,
+                buttons: false,
+                fullScreen: false,
+                smallSize: 500,
+                startSlide: 0,
+                mediumSize: 1000,
+                largeSize: 3000,
+                thumbnailArrows: true,
+                autoplay: false,
+            });
+        });
+    </script>
 
     <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
     <script src=<?php echo base_url("rs-plugin/js/jquery.themepunch.tools.min.js"); ?>></script>

@@ -7,7 +7,7 @@
                 <div class="col">
                     <div class="page-description d-flex align-items-center">
                         <div class="page-description-content flex-grow-1">
-                            <h1>Detail Wisata</h1>
+                            <h1>Update Data Panorama</h1>
                         </div>
                         <!-- <div class="page-description-actions">
                                         <a href="#" class="btn btn-info btn-style-light"><i class="material-icons-outlined">file_download</i>Download</a>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
                     <h3>Data Wisata</h3>
                     <?php if (!empty(session()->getFlashdata('error'))) : ?>
                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -34,10 +34,11 @@
                     <?php endif; ?>
                     <form method="post" action="<?= base_url('/edit-pano/' . $uri); ?>" id="upload" enctype="multipart/form-data">
                         <?= csrf_field(); ?>
-                        <?php foreach ($getdata as $user) : ?>
+                        <?php $obj = json_decode(json_encode($getdata), true);
+                        foreach ($obj as $user) : ?>
+                            <input type="hidden" name="id_panorama" value="<?= $user['id_panorama']; ?>">
                             <div class="card">
                                 <div class="card-body">
-
                                     <label class="form-label" for="customFile">Panorama 1</label>
                                     <input type="file" class="form-control" id="link_panorama1" name="link_panorama1" />
                                     <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
@@ -62,18 +63,7 @@
                                     <input type="file" class="form-control" id="link_panorama3" name="link_panorama3" />
                                     <br>
                                     <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                    <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano3" name="deskripsi_pano3"><?= $user['deskripsi_pano3'] ?></textarea>
-                                    <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-
-                                    <label class="form-label" for="customFile">Panorama 4</label>
-                                    <input type="file" class="form-control" id="link_panorama4" name="link_panorama4" />
-                                    <br>
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                    <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano4" name="deskripsi_pano4"><?= $user['deskripsi_pano4'] ?></textarea>
+                                    <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano3" name="deskripsi_pano3"><?= $user['deskripsi_pano2'] ?></textarea>
                                     <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                                 </div>
                             </div>

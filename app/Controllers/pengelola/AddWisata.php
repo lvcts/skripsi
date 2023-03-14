@@ -69,7 +69,7 @@ class AddWisata extends BaseController
             'id' => $id,
         ]);
         $uploadFoto->move('img/upload/', $basename);
-        session()->setFlashdata('success', 'Berkas Berhasil diupload');
+        session()->setFlashdata('success', 'Data Berhasil Ditambahkan');
         return redirect()->to(base_url('/tambah-wisata'));
     }
     public function editWisata()
@@ -112,19 +112,21 @@ class AddWisata extends BaseController
         $basename = $uploadFoto->getName();
         $id = session()->id;
         $namaFoto = 'img/upload/' . $basename;
-        $id = session()->id;
+        $id_wisata = $this->request->getVar('id_wisata');
         $data = [
+            'id_wisata' => $id_wisata,
             'nama_wisata' => $this->request->getVar('nama_wisata'),
             'alamat_wisata' => $this->request->getPost('alamat_wisata'),
             'deskripsi' => $this->request->getPost('deskripsi'),
             'foto' => $namaFoto,
             'id' => $id,
         ];
-        $this->wisata->where('id', $id);
+        $this->wisata->where('id_wisata', $id_wisata);
         $this->wisata->set($data);
-        $this->wisata->update($id, $data);
+        $this->wisata->update($id_wisata, $data);
         $uploadFoto->move('img/upload/', $basename);
-        session()->setFlashdata('success', 'Berkas Berhasil diupload');
-        return redirect()->to(base_url('/home-admin'));
+
+        session()->setFlashdata('success', 'Data Berhasil diupdate');
+        return redirect()->back()->withInput();
     }
 }

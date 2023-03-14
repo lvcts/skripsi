@@ -45,7 +45,7 @@ if (session()->id != null) {
     $routes->get('/tambah-wisata', 'pengelola\AddWisata::index', ['as' => 'tambahWisata']);
     $routes->get('/edit-wisata/(:any)', 'pengelola\HomeAdmin::editWisata/$1', ['as' => 'editWisata']);
     $routes->get('/panorama/(:any)', 'pengelola\Panoramic::panorama/$1');
-    $routes->get('/edit-panorama/(:any)', 'pengelola\EditPanoramic::panorama/$1');
+    $routes->get('/edit-panorama/(:any)', 'pengelola\Panoramic::editview/$1');
     $routes->get('/all-list', 'pengelola\HomeAdmin::listWisata', ['as' => 'listWisataAdmin']);
     $routes->get('/edit-profile', 'pengelola\HomeAdmin::editProfile', ['as' => 'editProfile']);
     $routes->get('/booking', 'pengelola\HomeAdmin::bookingWisata', ['as' => 'bookingWisata']);
@@ -57,7 +57,7 @@ $routes->get('/signup-process', 'pengelola\Auth::process_signup');
 $routes->get('/signin-process', 'pengelola\Auth::process_signin');
 $routes->match(['get', 'post'], '/add-wisata', 'pengelola\AddWisata::addWisata');
 $routes->match(['get', 'post'], '/add-panorama/(:num)', 'pengelola\Panoramic::addpano/$1');
-$routes->match(['get', 'post'], '/edit-pano/(:num)', 'pengelola\EditPanoramic::editpano/$1');
+$routes->match(['get', 'post'], '/edit-pano/(:num)', 'pengelola\Panoramic::editpano/$1');
 $routes->match(['get', 'post'], '/profile', 'pengelola\HomeAdmin::profile');
 $routes->match(['get', 'post'], '/bookingproccess', 'Home::booking');
 $routes->match(['get', 'post'], '/edit-wisata', 'pengelola\AddWisata::editWisata');

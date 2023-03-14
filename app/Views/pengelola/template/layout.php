@@ -60,9 +60,6 @@
                                         <a class="nav-link" href="<?= route_to('tambahWisata') ?>">Tambah Data Wisata</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?= route_to('bookingWisata') ?>">Pesanan</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" href="<?= route_to('editProfile') ?>">Edit Profile</a>
                                     </li>
                                     <li class="nav-item">

@@ -65,18 +65,6 @@
                                 <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-
-                                <label class="form-label" for="customFile">Panorama 4</label>
-                                <input type="file" class="form-control" id="link_panorama4" name="link_panorama4" />
-                                <br>
-                                <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
-                                <textarea class="form-control" aria-label="With textarea" id="deskripsi_pano4" name="deskripsi_pano4"></textarea>
-                                <div id="emailHelp" class="form-text">Isi deskripsi tempat </div>
-                            </div>
-                        </div>
-                        <!-- <input type="hidden" name="uri" id="uri" value=""> -->
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
